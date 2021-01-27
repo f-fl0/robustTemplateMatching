@@ -6,3 +6,6 @@ template_private/
 robustTM.ipynb
 py_sample.py
 results/
+
+*.so
+*.o
