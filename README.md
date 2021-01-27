@@ -9,6 +9,13 @@ http://www.apsipa.org/proceedings/2017/CONTENTS/papers2017/14DecThursday/TA-02/T
 * torchvision (0.2.1)
 * cv2
 * (optional) cython
+* gcc when using cython
+
+# Compile cython_files
+```
+cd cython_files
+python setup.py build_ext --inplace
+```
 
 # Usage
 ```
