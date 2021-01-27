@@ -43,3 +43,10 @@ python run.py sample/sample2.jpg template/template2.png --use_cuda --use_cython
 |sample image|template image|result image|
 |---|---|---|
 |<img src="https://i.imgur.com/KEDIu1p.jpg" width=300>|<img src="https://i.imgur.com/nXRvBjU.png" width=70>|<img src="https://i.imgur.com/nqMdhbX.jpg" width=300>|
+
+# Docker environment
+
+Build the image
+```
+docker build -t rtm .
+```

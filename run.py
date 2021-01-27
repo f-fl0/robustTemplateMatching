@@ -38,7 +38,7 @@ def nms(dets, scores, thresh):
         order = order[inds + 1]
 
     return keep
-    
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='robust template matching using CNN')
@@ -55,7 +55,7 @@ if __name__ == '__main__':
             std=[0.229, 0.224, 0.225],
         )
     ])
-    
+
     raw_image = cv2.imread(args.image_path)[..., ::-1]
     image = image_transform(raw_image.copy()).unsqueeze(0)
 
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         d_img = cv2.rectangle(d_img, boxes[i][0], boxes[i][1], (255, 0, 0), 3)
         d_img = cv2.circle(d_img, centers[i], int(
             (boxes[i][1][0] - boxes[i][0][0])*0.2), (0, 0, 255), 2)
-        
-    if cv2.imwrite("result.png", d_img[..., ::-1]):
+
+    if cv2.imwrite("results/result.png", d_img[..., ::-1]):
         print("result.png was generated")
-    
+
